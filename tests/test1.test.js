@@ -1,5 +1,5 @@
 const request = require('supertest')
-const app=require('../server')
+const app=require('../index')
 
 describe("Test suite 1:",()=>{
     test("test 1: ",async()=>{
