@@ -16,7 +16,7 @@ mongoose.connect(dbURL, {
 }).then((result) => app.listen(port, () => {
     console.log('Server started:)!')
 }))
-    .catch((err) => console.log(err));
+    .catch((error) => console.error(error));
 
 app.post('/savestudent', (req, res) => {
     // Extract the values from the request body
