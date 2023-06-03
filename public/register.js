@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const data = "Name must have at least 4 characters";
             const contentDiv = document.getElementById("errormessage");
             contentDiv.innerHTML = data;
+            contentDiv.style.color = "red";
             return;
         }
 
@@ -25,12 +26,14 @@ document.addEventListener('DOMContentLoaded', function () {
             const data = "Exam scores should only contain numbers";
             const contentDiv = document.getElementById("errormessage");
             contentDiv.innerHTML = data;
+            contentDiv.style.color = "red";
             return;
         }
         if (Number(updatedexam1) > 100 || Number(updatedexam1) < 0 || Number(updatedexam1) > 100 || Number(updatedexam1) < 0 || Number(updatedexam1) > 100 || Number(updatedexam1) < 0) {
             const data = "Exam scores must be between 0 and 100";
             const contentDiv = document.getElementById("errormessage");
             contentDiv.innerHTML = data;
+            contentDiv.style.color = "red";
             return;
         }
         // Send a request to the server to save the student
