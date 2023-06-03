@@ -10,19 +10,6 @@ const Student = require('./modules/student');
 // Middleware to parse JSON request bodies
 app.use(express.json());
 
-// const connectToDatabase = require('./db/db');
-// // Connect to MongoDB and start the server
-// connectToDatabase()
-//     .then(() => {
-//         app.listen(port, () => {
-//             console.log(`Server running on port: ${port}`);
-//         });
-//     })
-//     .catch((error) => {
-//         console.error('Error connecting to MongoDB:', error);
-//     });
-
-
 mongoose.connect(dbURL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
@@ -34,18 +21,6 @@ mongoose.connect(dbURL, {
 app.post('/savestudent', (req, res) => {
     // Extract the values from the request body
     const { name, exam1, exam2, exam3 } = req.body;
-
-
-    // Validate the name field (only letters)
-    // const nameRegex = /^[A-Za-z]+$/;
-    // if (!nameRegex.test(name)) {
-    //   return res.status(400).send('Name should only contain letters');
-    // }
-
-    // Validate the other fields (only numbers)
-    // if (isNaN(Number(exam1)) || isNaN(Number(exam2)) || isNaN(Number(exam3))) {
-    //   return res.status(400).send('Exam scores should only contain numbers');
-    // }
 
     // Create a new Student document
     const student = new Student({
@@ -75,4 +50,4 @@ app.get('/test', (req, res) => {
     res.send('Test hello')
 })
 
-module.exports = app;
+// module.exports = app;

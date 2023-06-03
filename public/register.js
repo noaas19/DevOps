@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
             contentDiv.innerHTML = data;
             return;
         }
-        if (Number(updatedexam1)>100||Number(updatedexam1)<0||Number(updatedexam1)>100||Number(updatedexam1)<0 || Number(updatedexam1)>100||Number(updatedexam1)<0) {
+        if (Number(updatedexam1) > 100 || Number(updatedexam1) < 0 || Number(updatedexam1) > 100 || Number(updatedexam1) < 0 || Number(updatedexam1) > 100 || Number(updatedexam1) < 0) {
             const data = "Exam scores must be between 0 and 100";
             const contentDiv = document.getElementById("errormessage");
             contentDiv.innerHTML = data;
@@ -57,6 +57,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
                 // Handle the response from the server if needed
                 console.log(data);
+                NameInput.value = '';
+                exam1Input.value = '';
+                exam2Input.value = '';
+                exam3Input.value = '';
             })
             .catch(error => {
                 // Handle any errors that occur during the request
