@@ -7,7 +7,6 @@ const app = express();
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
 const Student = require('./modules/student');
-// Middleware to parse JSON request bodies
 app.use(express.json());
 
 mongoose.connect(dbURL, {
