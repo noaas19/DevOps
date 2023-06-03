@@ -50,4 +50,4 @@ app.get('/test', (req, res) => {
     res.send('Test hello')
 })
 
-// module.exports = app;
+module.exports = app;
