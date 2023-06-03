@@ -1,8 +1,8 @@
 
-const port = process.env.PORT || 3000;
+const port = 3000;
 const express = require('express');
 const mongoose = require('mongoose');
-const dbURL = 'mongodb+srv://devops:devops1234@devops.cklki5a.mongodb.net/devops?retryWrites=true&w=majority';
+const dbURL = 'mongodb+srv://devops:devops1234@devops.wbacnkc.mongodb.net/devops?retryWrites=true&w=majority';
 const app = express();
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
@@ -10,18 +10,31 @@ const Student = require('./modules/student');
 // Middleware to parse JSON request bodies
 app.use(express.json());
 
+// const connectToDatabase = require('./db/db');
+// // Connect to MongoDB and start the server
+// connectToDatabase()
+//     .then(() => {
+//         app.listen(port, () => {
+//             console.log(`Server running on port: ${port}`);
+//         });
+//     })
+//     .catch((error) => {
+//         console.error('Error connecting to MongoDB:', error);
+//     });
+
+
 mongoose.connect(dbURL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 }).then((result) => app.listen(port, () => {
     console.log('Server started:)!')
 }))
-    .catch((error) => console.error(error));
+    .catch((error) => { console.error(error); });
 
 app.post('/savestudent', (req, res) => {
     // Extract the values from the request body
     const { name, exam1, exam2, exam3 } = req.body;
-  
+
 
     // Validate the name field (only letters)
     // const nameRegex = /^[A-Za-z]+$/;
