@@ -14,7 +14,7 @@ mongoose.connect(dbURL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 }).then((result) => app.listen(port, () => {
-    console.log('Server started:)!')
+    console.log("Server started!")
 }))
     .catch((error) => { console.error(error); });
 

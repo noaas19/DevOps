@@ -17,16 +17,17 @@ document.addEventListener('DOMContentLoaded', function () {
         if (updatedName.length < 3 || updatedName.length > 20) {
             const data = "Name must have at least 4 characters";
             const contentDiv = document.getElementById("errormessage");
-            contentDiv.innerHTML = data;
             contentDiv.style.color = "red";
+            contentDiv.innerHTML = data;
             return;
         }
 
         if (isNaN(Number(updatedexam1)) || isNaN(Number(updatedexam2)) || isNaN(Number(updatedexam3))) {
             const data = "Exam scores should only contain numbers";
             const contentDiv = document.getElementById("errormessage");
-            contentDiv.innerHTML = data;
             contentDiv.style.color = "red";
+            contentDiv.innerHTML = data;
+
             return;
         }
         if (Number(updatedexam1) > 100 || Number(updatedexam1) < 0 || Number(updatedexam1) > 100 || Number(updatedexam1) < 0 || Number(updatedexam1) > 100 || Number(updatedexam1) < 0) {
