@@ -46,8 +46,6 @@ app.get('/', (req, res) => {
     res.render('register');
 })
 
-app.get('/test', (req, res) => {
-    res.send('Test hello')
-})
+
 
 module.exports = app;

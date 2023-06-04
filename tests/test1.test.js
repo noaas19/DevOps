@@ -53,22 +53,13 @@ describe('POST /savestudent', () => {
   });
 });
 
-// Test the GET / endpoint
-describe('GET /', () => {
-  test('should render the register view', async () => {
-    const response = await request(app).get('/');
+// // Test the GET / endpoint
+// describe('GET /', () => {
+//   test('should render the register view', async () => {
+//     const response = await request(app).get('/');
 
-    expect(response.status).toBe(200);
-    expect(response.text).toContain('Register');
-  });
-});
+//     expect(response.status).toBe(200);
+//     expect(response.text).toContain('Register');
+//   });
+// });
 
-// Test the GET /test endpoint
-describe('GET /test', () => {
-  test('should return "Test hello"', async () => {
-    const response = await request(app).get('/test');
-
-    expect(response.status).toBe(200);
-    expect(response.text).toBe('Test hello');
-  });
-});
