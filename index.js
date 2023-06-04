@@ -12,9 +12,10 @@ app.use(express.json());
 mongoose.connect(dbURL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
-}).then((result) => app.listen(port, () => {
-    console.log('Server started:)!')
+}).then((result) => app.listen(port,() => {
+    console.log('Server started:)!');
 }))
+
     .catch((error) => { console.error(error); });
 
 app.post('/savestudent', (req, res) => {
