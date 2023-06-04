@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon index.js",
+    "lint": "eslint --color",
     "test": "jest --detectOpenHandles --forceExit",
     "start": "node index.js"
   },
@@ -27,6 +28,7 @@
     "nodemon": "^2.0.22"
   },
   "devDependencies": {
+    "eslint": "^8.42.0",
     "supertest": "^6.3.3"
   }
 }

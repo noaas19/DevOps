@@ -12,6 +12,15 @@ document.addEventListener('DOMContentLoaded', function () {
         const updatedexam1 = exam1Input.value;
         const updatedexam2 = exam2Input.value;
         const updatedexam3 = exam3Input.value;
+
+        if (updatedName === '' || updatedexam1 === '' || updatedexam2 === '' || updatedexam3 === '') {
+            const data = "Please fill in all fields";
+            const contentDiv = document.getElementById("errormessage");
+            contentDiv.style.color = "red";
+            contentDiv.innerHTML = data;
+            return; // Exit the function if any field is empty
+          }
+
         // Validate the input fields
         if (updatedName.length < 3 || updatedName.length > 20) {
             const data = "Name must have at least 4 characters";
