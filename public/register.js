@@ -2,7 +2,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const submitbutton = document.querySelector('.submit');
 
     submitbutton.addEventListener('click', function () {
-        const submitbutton = document.querySelector('.submit');
         const NameInput = document.getElementById('name');
         const exam1Input = document.getElementById('exam1');
         const exam2Input = document.getElementById('exam2');
